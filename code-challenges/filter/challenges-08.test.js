@@ -9,7 +9,10 @@ For example, oddValues([1,2,3]) returns [1,3].
 ------------------------------------------------------------------------------------------------ */
 
 const oddValues = (arr) => {
-  
+  let result = arr.filter( (val, idx) => {
+    return val % 2 !== 0;
+  });
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -24,7 +27,7 @@ For example, filterStringsWithVowels('gregor','hound','xyz') returns ['gregor', 
 
 
 const filterStringsWithVowels = (arr) => {
-  // Solution code here...
+  // WILL RESUBMITI WHEN I LEARN REGEX. STILL HAVENT DONE THAT CODE CHALLENGE BECAUSE I DONT GET IT.
 };
 
 
@@ -37,7 +40,13 @@ For example, notInFirstArray([1,2,3], [1,2,3,4]) returns [4].
 ------------------------------------------------------------------------------------------------ */
 
 const notInFirstArray = (forbiddenValues, arr) => {
-  // Solution code here...
+  let result = arr.filter( ( val , idx ) => {
+    if (forbiddenValues.includes(val)) {
+      return false;
+    }
+    return true;
+  })
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -80,7 +89,13 @@ const snorlaxData = {
 };
 
 const getBaseStatGreaterThan = (arr, minBaseStat) => {
-  // Solution code here...
+  let result = arr.filter( (val , idx ) => {
+    if (val.baseStat > minBaseStat) {
+      return true;
+    }
+    return false;
+  })
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -92,7 +107,13 @@ For example, getStatName(snorlaxData.stats, 50) will return ['special-defense', 
 ------------------------------------------------------------------------------------------------ */
 
 const getStatName = (arr, minBaseStat) => {
-  // Solution code here...
+  let result = [];
+  arr.forEach( ( val , idx ) => {
+    if (val.baseStat > minBaseStat) {
+      result.push(val.stat.name);
+    }
+  })
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -145,7 +166,13 @@ const characters = [
 ];
 
 const getCharactersWithoutChildren = (arr) => {
-  // Solution code here...
+  let result = arr.filter( ( val , idx ) => {
+    if (val.children) {
+      return false;
+    }
+    return true;
+  })
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
@@ -157,7 +184,19 @@ For example: evenOddNumericValues(['Gregor', 2, 4, 1]) returns ['even', 'even', 
 ------------------------------------------------------------------------------------------------ */
 
 const evenOddNumericValues = (arr) => {
-  // Solution code here...
+  let bucket = arr.filter( ( val , idx ) => {
+    if (typeof val === 'number') {
+      return true;
+    }
+    return false;
+  })
+  let result = bucket.map( ( val , idx ) => {
+    if ( val % 2 === 0) {
+      return 'even';
+    }
+    return 'odd';
+  })
+  return result;
 };
 
 /* ------------------------------------------------------------------------------------------------
