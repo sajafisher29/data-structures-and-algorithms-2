@@ -11,3 +11,15 @@ We used a for loop to iterate through the input array and set the values of a ne
 
 ## Solution
 /assets/image1.jpg
+
+2. ArrayShift
+
+# Insert halfway into array
+
+## Challenge
+
+
+## Approach & Efficiency
+
+
+## Solution
