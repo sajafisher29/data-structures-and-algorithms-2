@@ -23,7 +23,7 @@ Created a new array with a length of +1 the input array. Iterated through the in
 
 
 ## Solution
-<img src="./assets/challenge2.jpg.jpg"
+<img src="./assets/challenge2.jpg"
      alt="White Board Picture"
      style="float: left; margin-right: 10px; width: 200px;" />
      
@@ -38,6 +38,6 @@ Found the beginning and end of the input array. Find the middle. Check if the mi
 
 
 ## Solution
-<img src="./assets/challenge3.jpg.jpg"
+<img src="./assets/challenge3.jpg"
      alt="White Board Picture"
      style="float: left; margin-right: 10px; width: 200px;" />
