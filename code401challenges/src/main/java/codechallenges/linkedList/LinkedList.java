@@ -41,4 +41,51 @@ public class LinkedList {
         }
         return false;
     }
+    public static void append(int value){
+        Node n = head;
+        while(n.next != null){
+            n = n.next;
+        }
+        Node newNode = new Node();
+        n.next = newNode;
+        newNode.value = value;
+    }
+    public static void insertBefore(int value, int newValue){
+        Node n = head;
+        Node next = n.next;
+        while(n.next != null){
+            if(n.value == value || next.value == value){
+                break;
+            }
+            n = n.next;
+        }
+        if(next.value == value) {
+            Node newNode = new Node();
+            newNode.next = next;
+            n.next = newNode;
+            newNode.value = newValue;
+        } else if (n.value == value && n.next != null){
+            Node newNode = new Node();
+            newNode.value = newValue;
+            newNode.next = head;
+            head = newNode;
+        } else {
+            System.out.println("Value not found in linked list");
+        }
+    }
+    public static void insertAfter(int value, int newValue) {
+        Node n = head;
+        Node next = n.next;
+        while (n.next != null || n.value == value) {
+            if (n.value == value) {
+                Node newNode = new Node();
+                newNode.value = newValue;
+                n.next = newNode;
+                newNode.next = next;
+                break;
+            }
+            n = n.next;
+            next = n.next;
+        }
+    }
 }
