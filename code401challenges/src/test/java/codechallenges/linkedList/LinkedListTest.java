@@ -15,7 +15,7 @@ public class LinkedListTest {
     @Test
     public void insert() {
         LinkedList linky = new LinkedList();
-        LinkedList.insert(5);
+        linky.insert(5);
         assertEquals("The value of the head node should be 5", 5, linky.head.value);
     }
 
@@ -113,7 +113,7 @@ public class LinkedListTest {
         linky.insert(5);
         linky.insert(8);
         linky.insert(12);
-        linky.insertBefore(12, 99);
+        linky.insertBefore(8, 99);
         Node n = linky.head;
         Node next = n.next;
         while (n.next != null) {
@@ -154,7 +154,7 @@ public class LinkedListTest {
             n = n.next;
             next = n.next;
         }
-        assertEquals("Should be no value after 8", null, n.next);
+        assertEquals("Value after 5 should be 99", 99, next.value);
     }
 
     @Test
@@ -184,7 +184,8 @@ public class LinkedListTest {
         linky.insert(8);
         linky.insert(12);
         linky.insertAfter(12, 99);
-        System.out.println(linky.showString());
+        Node n = linky.head.next;
+        assertEquals("The second value should be 99",99,n.value);
 
     }
     @Test
@@ -194,7 +195,55 @@ public class LinkedListTest {
         linky.insert(8);
         linky.insert(12);
         linky.insertAfter(5, 99);
-        System.out.println(linky.showString());
+        Node n = linky.head;
+        while (n.next != null) {
+            n = n.next;
+        }
+        assertEquals("The new value should insert at end of list",99,n.value);
     }
-
+    @Test
+    public void returnFromEndEnd(){
+        LinkedList linky = new LinkedList();
+        linky.insert(5);
+        linky.insert(8);
+        linky.insert(12);
+        assertEquals("The last element in the array should be returned",5,linky.returnFromEnd(0));
+    }
+    @Test
+    public void returnFromEndMiddle(){
+        LinkedList linky = new LinkedList();
+        linky.insert(5);
+        linky.insert(8);
+        linky.insert(12);
+        assertEquals("The last element in the array should be returned",8,linky.returnFromEnd(1));
+    }
+    @Test
+    public void returnFromListLengthOne(){
+        LinkedList linky = new LinkedList();
+        linky.insert(5);
+        assertEquals("The last element in the array should be returned",5,linky.returnFromEnd(0));
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void returnKGreaterThanLength(){
+        LinkedList linky = new LinkedList();
+        linky.insert(5);
+        linky.insert(5);
+        linky.insert(5);
+        linky.insert(5);
+        linky.returnFromEnd(7);
+    }
+    @Test(expected = IllegalArgumentException.class)
+    public void returnKIsNegative(){
+        LinkedList linky = new LinkedList();
+        linky.insert(5);
+        linky.insert(5);
+        linky.returnFromEnd(-1);
+    }
+    @Test
+    public void kAndLengthAreSame(){
+        LinkedList linky = new LinkedList();
+        linky.insert(5);
+        linky.insert(6);
+        assertEquals("The value of the first node should be returned",6,linky.returnFromEnd(2));
+    }
 }
