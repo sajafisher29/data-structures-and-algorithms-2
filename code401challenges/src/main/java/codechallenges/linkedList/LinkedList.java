@@ -5,9 +5,9 @@ package codechallenges.linkedList;
 
 public class LinkedList {
 
-    static Node head;
+    Node head;
 
-    public static void insert(int value) {
+    public void insert(int value) {
 
         Node node = new Node();
         node.value = value;
@@ -15,7 +15,7 @@ public class LinkedList {
         head = node;
 
     }
-    public static String showString() {
+    public String showString() {
         Node n = head;
         String result = "";
         while(n.next != null) {
@@ -28,7 +28,7 @@ public class LinkedList {
         System.out.println(result);
         return result;
     }
-    public static boolean includes(int value){
+    public boolean includes(int value){
         Node n = head;
         while(n.next != null){
             if(n.value == value){
@@ -41,7 +41,7 @@ public class LinkedList {
         }
         return false;
     }
-    public static void append(int value){
+    public void append(int value){
         Node n = head;
         while(n.next != null){
             n = n.next;
@@ -50,7 +50,7 @@ public class LinkedList {
         n.next = newNode;
         newNode.value = value;
     }
-    public static void insertBefore(int value, int newValue){
+    public void insertBefore(int value, int newValue){
         Node n = head;
         Node next = n.next;
         while(n.next != null){
@@ -73,7 +73,7 @@ public class LinkedList {
             System.out.println("Value not found in linked list");
         }
     }
-    public static void insertAfter(int value, int newValue) {
+    public void insertAfter(int value, int newValue) {
         Node n = head;
         Node next = n.next;
         while (n.next != null || n.value == value) {
@@ -87,5 +87,24 @@ public class LinkedList {
             n = n.next;
             next = n.next;
         }
+    }
+    public int returnFromEnd(int k){
+        if(k < 0){
+            throw new IllegalArgumentException();
+        }
+        int counter = 0;
+        Node n = this.head;
+        while(n.next != null){
+            n = n.next;
+            counter++;
+        }
+        if(k - 1 > counter){
+            throw new IllegalArgumentException();
+        }
+        n = this.head;
+        for(int i = 0;i < counter - k;i++){
+            n = n.next;
+        }
+        return n.value;
     }
 }
