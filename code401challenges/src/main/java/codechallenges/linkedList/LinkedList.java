@@ -15,7 +15,8 @@ public class LinkedList {
         head = node;
 
     }
-    public String showString() {
+
+}    public String showString() {
         Node n = head;
         String result = "";
         while(n.next != null) {
@@ -27,7 +28,6 @@ public class LinkedList {
         result += banana;
         System.out.println(result);
         return result;
-    }
     public boolean includes(int value){
         Node n = head;
         while(n.next != null){
@@ -107,4 +107,25 @@ public class LinkedList {
         }
         return n.value;
     }
+//    public static LinkedList mergeList(LinkedList list1, LinkedList list2){
+//        Node current1 = list1.head;
+//        Node current2 = list2.head;
+//        Node zipper1;
+//        Node zipper2;
+//        while(current1 != null && current2 != null){
+//
+//            zipper1 = current1.next;
+//            zipper2 = current2.next;
+//
+//            current1.next = zipper2;
+//            current2.next = zipper1;
+//
+//            // switching the pointers
+//            current1 = zipper1;
+//            current2 = zipper2;
+//
+//        }
+//        list2.head = current2;
+//        return list1;
+//    }
 }

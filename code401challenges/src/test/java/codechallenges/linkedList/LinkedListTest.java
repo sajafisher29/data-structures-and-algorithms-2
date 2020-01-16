@@ -246,4 +246,17 @@ public class LinkedListTest {
         linky.insert(6);
         assertEquals("The value of the first node should be returned",6,linky.returnFromEnd(2));
     }
+    @Test
+    public void testMergeList(){
+        LinkedList linky = new LinkedList();
+        linky.insert(0);
+        linky.insert(0);
+        linky.insert(0);
+        LinkedList linky2 = new LinkedList();
+        linky.insert(1);
+        linky.insert(1);
+        linky.insert(1);
+        LinkedList testList = LinkedList.mergeList(linky,linky2);
+        System.out.println(testList.toString());
+    }
 }
