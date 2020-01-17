@@ -5,3 +5,4 @@ TABLE OF CONTENTS:
 4. <a href="./pages/challenge4.md">Singly Linked List</a>
 5. <a href="./pages/challenge5.md">linked list insertions</a>
 6. <a href="./pages/challenge6.md">k-th value from the end of a linked list.</a>
+7. <a href="./pages/challenge8.md">Merge list</a>
