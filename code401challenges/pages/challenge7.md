@@ -9,6 +9,6 @@ Loop through the array and count the length. Loop through again for the length m
 
 
 ## Solution
-<img src="../assets/challenge7.jpg"
+<img src="../assets/challenge6.jpg"
      alt="White Board Picture"
      style="float: left; margin-right: 10px; width: 200px;" />
