@@ -46,4 +46,9 @@ public class StackTest {
         Stack zack = new Stack();
         assertTrue("Zack the stack should be empty",zack.isEmpty());
     }
+    @Test
+    public void testPeek(){
+        Stack zack = new Stack();
+        System.out.println(zack.peek());
+    }
 }
