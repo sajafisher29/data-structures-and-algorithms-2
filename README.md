@@ -6,3 +6,4 @@ TABLE OF CONTENTS:
 5. <a href="./pages/challenge5.md">linked list insertions</a>
 6. <a href="./pages/challenge7.md">k-th value from the end of a linked list.</a>
 7. <a href="./pages/challenge8.md">Merge list</a>
+7. <a href="./pages/challenge11.md">Pseudo Queue</a>
