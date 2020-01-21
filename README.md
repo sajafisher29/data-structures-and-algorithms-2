@@ -1,21 +1,8 @@
-# Stacks and Queues
-Implementation: Stacks and Queues. This package is stacks and queues built from scratch to illustrate how they work.
-
-## Challenge
-The challenge was to build from scratch both stacks and queues and all their methods. As well as all of the tests to ensure that they work.
-
-## Approach & Efficiency
-I built this in the simplist most standard way I could think of. I didn't use generics, they aren't very complicated and I just thought it would be simpler to just use ints.
-
-## API
-LinkedList class:
-  - peek(): Returns the value of the head of the list.
-  - isEmpty(): Returns a boolean indicating whether or not the list is empty.
-
-Stack class:
- - push(): Pushes a new value onto the stack
- - pop(): Pops the node off the head of the stack and returns the value
-
- Queue class:
-  - enqueue(): Adds a node to the tail of the queue.
-  - dequeue(): removes the node from the head and returns the value.
+TABLE OF CONTENTS:
+1. <a href="./pages/challenge1.md">Array Reverse Challenge</a>
+2. <a href="./pages/challenge2.md">ArrayShift</a>
+3. <a href="./pages/challenge3.md">BinarySearch</a>
+4. <a href="./pages/challenge4.md">Singly Linked List</a>
+5. <a href="./pages/challenge5.md">linked list insertions</a>
+6. <a href="./pages/challenge7.md">k-th value from the end of a linked list.</a>
+7. <a href="./pages/challenge8.md">Merge list</a>
